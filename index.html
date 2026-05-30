@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Lexis Partners — юридический консалтинг. Корпоративное право, арбитраж, M&A, налоговый консалтинг, защита бизнеса." />
+  <title>Lexis Partners — Юридический консалтинг</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="gl-canvas"></canvas>
+  <canvas id="particle-canvas"></canvas>
+  <div class="grain-overlay"></div>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" data-scroll="0">
+        <img src="images/logo.svg" alt="Lexis Partners Logo" class="logo-img" />
+        <span class="logo-text">LEXIS <span class="logo-accent">PARTNERS</span></span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#" data-scroll="1" class="nav-link">Практики</a></li>
+        <li><a href="#" data-scroll="2" class="nav-link">Экспертиза</a></li>
+        <li><a href="#" data-scroll="3" class="nav-link">Методология</a></li>
+        <li><a href="#" data-scroll="4" class="nav-link">О нас</a></li>
+        <li><a href="#" data-scroll="5" class="nav-link nav-cta">Консультация</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="nav-scrim" id="nav-scrim" hidden></div>
+  <div class="nav-drawer" id="nav-drawer" hidden>
+    <button class="drawer-close" id="drawer-close" aria-label="Закрыть">✕</button>
+    <ul class="drawer-links" id="drawer-links">
+      <li><a href="#" data-scroll="1" class="drawer-link">Практики</a></li>
+      <li><a href="#" data-scroll="2" class="drawer-link">Экспертиза</a></li>
+      <li><a href="#" data-scroll="3" class="drawer-link">Методология</a></li>
+      <li><a href="#" data-scroll="4" class="drawer-link">О нас</a></li>
+      <li><a href="#" data-scroll="5" class="drawer-link">Консультация</a></li>
+    </ul>
+    <div class="drawer-contacts">
+      <a href="#" target="_blank" class="drawer-social">Telegram</a>
+      <a href="#" target="_blank" class="drawer-social">Email</a>
+    </div>
+  </div>
+
+  <div id="ui-layer">
+    <div class="stage">
+
+      <section class="page is-active" data-index="0" id="hero">
+        <div class="page-inner hero-inner">
+          <img src="images/logo.svg" alt="Lexis Partners" class="hero-logo reveal-3d">
+          <div class="hero-badge reveal-3d">ПРАВО • КОНСАЛТИНГ • ЗАЩИТА БИЗНЕСА</div>
+          <h1 class="hero-title reveal-3d"><span class="gradient-text">LEXIS PARTNERS</span></h1>
+          <p class="hero-subtitle reveal-3d">Право на вашей стороне. Стратегический юридический консалтинг для бизнеса, который ценит надёжность и конфиденциальность.</p>
+          <div class="hero-cta-group reveal-3d">
+            <a href="#" data-scroll="5" class="btn-primary">Бесплатная консультация</a>
+            <a href="#" data-scroll="1" class="btn-outline">Наши практики</a>
+          </div>
+          <div class="hero-scroll-hint"><div class="scroll-line"></div><span>прокрутите</span></div>
+        </div>
+      </section>
+
+      <section class="page" data-index="1" id="services">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Юридические практики</div>
+          <h2 class="section-title reveal-3d">Области <span class="gradient-text">экспертизы</span></h2>
+          <p class="section-desc reveal-3d">Комплексное правовое сопровождение бизнеса — от регистрации до международных сделок</p>
+          <div class="services-grid reveal-3d">
+            <div class="service-card">
+              <div class="service-icon">🏛️</div>
+              <h3>Корпоративное право</h3>
+              <p>Регистрация, реорганизация, ликвидация юрлиц. Корпоративные договоры, уставы, акционерные соглашения.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">💰</div>
+              <h3>Налоговый консалтинг</h3>
+              <p>Оптимизация налоговой нагрузки, защита при проверках ФНС. Международное налоговое планирование и трансфертное ценообразование.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🛡️</div>
+              <h3>Защита бизнеса</h3>
+              <p>Противодействие рейдерству, защита активов, банкротные споры. Превентивный аудит рисков и антикризисное сопровождение.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">⚖️</div>
+              <h3>Арбитраж и суды</h3>
+              <p>Представительство в арбитражных судах всех инстанций. Международный коммерческий арбитраж, медиация и переговоры.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🔍</div>
+              <h3>Due Diligence</h3>
+              <p>Юридическая проверка бизнеса перед сделкой. Анализ рисков, проверка контрагентов, правовая экспертиза документации.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">🤝</div>
+              <h3>M&A сделки</h3>
+              <p>Сопровождение сделок слияния и поглощения. Структурирование, переговоры, подготовка и экспертиза документов.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="2" id="collections">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Наша экспертиза</div>
+          <h2 class="section-title reveal-3d">Пространство <span class="gradient-text">Lexis Partners</span></h2>
+          <p class="section-desc reveal-3d">Конфиденциальность, профессионализм и внимание к деталям — в каждом аспекте нашей работы.</p>
+          <div class="collections-grid reveal-3d">
+            <div class="collection-card card-large">
+              <img src="images/hero-coat.png" alt="Офис Lexis Partners" class="collection-img" />
+              <div class="collection-overlay">
+                <span class="collection-label">Главный офис</span>
+                <h3>Кабинет переговоров</h3>
+                <p>Приватные встречи в атмосфере абсолютной конфиденциальности</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <img src="images/hats.png" alt="Переговорная" class="collection-img" />
+              <div class="collection-overlay">
+                <span class="collection-label">Конференц-зал</span>
+                <h3>Стратегические сессии</h3>
+                <p>Для сложных переговоров и многосторонних встреч</p>
+              </div>
+            </div>
+            <div class="collection-card card-medium">
+              <img src="images/texture.png" alt="Правовая база" class="collection-img" />
+              <div class="collection-overlay">
+                <span class="collection-label">Правовая база</span>
+                <h3>Фундамент знаний</h3>
+                <p>Доступ к полной базе законодательства и прецедентов</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="3" id="production">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Методология</div>
+          <h2 class="section-title reveal-3d">Процесс работы<br><span class="gradient-text">Lexis Partners</span></h2>
+          <p class="section-desc reveal-3d">Системный подход к каждому делу — от первичной консультации до достижения результата</p>
+          <div class="production-layout reveal-3d">
+            <div class="production-image-wrap">
+              <img src="images/workshop.png" alt="Юридическая библиотека" class="production-img" />
+            </div>
+            <div class="production-stats">
+              <div class="stat-card">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">лет судебной практики</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">1000+</span>
+                <span class="stat-label">выигранных дел</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">положительных исходов</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">корпоративных клиентов</span>
+              </div>
+              <div class="production-steps">
+                <div class="prod-step"><span class="step-num">01</span><span class="step-text">Первичная консультация и подписание NDA</span></div>
+                <div class="prod-step"><span class="step-num">02</span><span class="step-text">Правовой анализ ситуации и оценка рисков</span></div>
+                <div class="prod-step"><span class="step-num">03</span><span class="step-text">Разработка стратегии и плана действий</span></div>
+                <div class="prod-step"><span class="step-num">04</span><span class="step-text">Представительство в суде / переговоры</span></div>
+                <div class="prod-step"><span class="step-num">05</span><span class="step-text">Достижение результата и постсопровождение</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="4" id="about">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Почему мы</div>
+          <h2 class="section-title reveal-3d">Преимущества<br><span class="gradient-text">Lexis Partners</span></h2>
+          <p class="section-desc reveal-3d">Мы защищаем не просто юридические интересы — мы защищаем ваш бизнес, репутацию и будущее</p>
+          <div class="about-grid reveal-3d">
+            <div class="about-card">
+              <div class="about-icon">🎓</div>
+              <h3>Команда экспертов</h3>
+              <p>Партнёры с опытом 15+ лет в ведущих юридических фирмах. Кандидаты юридических наук, арбитры и медиаторы.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🔐</div>
+              <h3>Абсолютная конфиденциальность</h3>
+              <p>NDA с первой встречи. Защищённые каналы связи, шифрование документов. Адвокатская тайна гарантирована законом.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🎯</div>
+              <h3>Результат, а не процесс</h3>
+              <p>Работаем на результат. Прозрачная отчётность, фиксированные гонорары, success fee для судебных дел.</p>
+            </div>
+            <div class="about-card">
+              <div class="about-icon">🌍</div>
+              <h3>Международная практика</h3>
+              <p>Работа с иностранными юрисдикциями, международный арбитраж, сопровождение трансграничных сделок.</p>
+            </div>
+          </div>
+          <div class="about-cta reveal-3d">
+            <a href="#" target="_blank" class="btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.16 14.26l-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.658.326z"/></svg>
+              Написать в Telegram
+            </a>
+            <a href="mailto:info@lexispartners.ru" class="btn-outline">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" data-index="5" id="contact">
+        <div class="page-inner">
+          <div class="section-badge reveal-3d">Консультация</div>
+          <h2 class="section-title reveal-3d">Обсудим вашу <span class="gradient-text">ситуацию</span></h2>
+          <p class="section-desc reveal-3d">Первичная консультация — бесплатно и конфиденциально. Расскажите о вашей задаче, и мы предложим решение</p>
+          <div class="contact-layout reveal-3d">
+            <div class="contact-form-wrap">
+              <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                  <label for="name">Ваше имя</label>
+                  <input type="text" id="name" name="name" placeholder="Как к вам обращаться?" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Телефон или Telegram</label>
+                  <input type="text" id="phone" name="phone" placeholder="+7 (___) ___-__-__" required />
+                </div>
+                <div class="form-group">
+                  <label for="interest">Область права</label>
+                  <select id="interest" name="interest">
+                    <option value="">Выберите направление</option>
+                    <option>Корпоративное право</option>
+                    <option>Налоговые споры</option>
+                    <option>Арбитражный суд</option>
+                    <option>Защита бизнеса / Антирейд</option>
+                    <option>Due Diligence</option>
+                    <option>Сделки M&A</option>
+                    <option>Банкротство</option>
+                    <option>Другое</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Описание ситуации</label>
+                  <textarea id="message" name="message" rows="3" placeholder="Кратко опишите вашу правовую задачу..."></textarea>
+                </div>
+                <button type="submit" class="btn-primary form-submit">Получить консультацию<span class="btn-arrow">→</span></button>
+              </form>
+            </div>
+            <div class="contact-info-wrap">
+              <div class="contact-info-card">
+                <h3>Контакты</h3>
+                <div class="contact-item"><span class="contact-icon">📱</span><div><strong>Telegram</strong><a href="#" target="_blank">ВАШ КОНТАКТ</a></div></div>
+                <div class="contact-item"><span class="contact-icon">📧</span><div><strong>Email</strong><a href="mailto:info@lexispartners.ru">info@lexispartners.ru</a></div></div>
+                <div class="contact-item"><span class="contact-icon">📍</span><div><strong>Адрес</strong><span>ул. Центральная, 1 — ваш город</span></div></div>
+                <div class="contact-item"><span class="contact-icon">⏰</span><div><strong>Приём</strong><span>Пн–Пт: 9:00 – 19:00, по записи</span></div></div>
+              </div>
+              <div class="contact-promise-card">
+                <div class="promise-icon">✦</div>
+                <h4>Гарантии</h4>
+                <p>NDA подписываем до начала обсуждения. Первичная консультация бесплатна. Адвокатская тайна защищена законом.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:32px"><a href="https://globalteamgroup.github.io/global-plus/#page-4" class="btn-outline" style="font-size:16px;padding:14px 40px;display:inline-block;text-decoration:none">ВЕРНУТЬСЯ НА ГЛАВНУЮ</a></div>
+        <footer class="footer">
+          <div class="footer-inner">
+            <span class="footer-logo">LEXIS PARTNERS</span>
+            <span class="footer-copy">© 2025 LEXIS PARTNERS. Юридический консалтинг и правовая защита бизнеса.</span>
+            <div class="footer-socials"><a href="#" target="_blank">TG</a><a href="mailto:info@lexispartners.ru">EM</a></div>
+          </div>
+        </footer>
+      </section>
+
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
